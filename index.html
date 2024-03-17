@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/91a051cf41.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/969A8F77-06B1-4597-A4A6-F37A4664DCC3.JPEG" class="logo" />
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-times" onclick="closemenu()"></i>
+
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmen()"></i>
+            </nav>
+            <div class="header-text">
+                <p id="fsd">Full Stack Developer</p>
+                <h1>Hey, I'm <span>Saman</span> <br />Hakim From Pune</h1>
+            </div>
+        </div>
+    </div>
+    <!-- -------------About---------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/saman _image.png" alt="" />
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                        aspernatur, aliquam unde, sed id ad magnam sunt eos doloribus
+                        impedit distinctio a consequuntur voluptas quisquam non soluta
+                        deserunt harum et labore. Cupiditate doloribus ipsa ratione,
+                        assumenda perspiciatis ipsam optio alias.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML & CSS</span><br>Provides the basic structure of sites & CSS is used to
+                                control presentation, formatting, and layout.</li>
+                            <li><span>JavaScript</span><br>Used to control the behavior of different elements.</li>
+                            <li><span>BootStrap</span><br>Bootstrap is a free front-end framework, with the purpose of
+                                making web development faster and easier.</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2016</span><br>SSC <br>percentage:88.20</li>
+                            <li><span>2018</span><br>HSC <br> percentage:56.62</li>
+                            <li><span>2023</span><br>B.Tech <br> percentage:69</li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- ------------Services-------------- -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="projects-list">
+                <div>
+                    <i class="fa-solid fa-clipboard-user"></i>
+                    <h2>Attendance Managment System</h2>
+                    <p>The proposed system aims to provide features such as detection
+                        and recognition of faces using Machine Learning algorithms like
+                        LBPH and Harcascade.
+                        Collect the data of the students with name and roll number for
+                        creating database. Image of the class will be taken using mobile
+                        camera. Using image, it will detect and separate the faces. Then it
+                        will calculate the features of individual. It will compare the face
+                        features from images and database, if the image gets recognised
+                        the attendance will get updated on excel sheet.</p>
+                    <!-- <a href="">Learn more</a> -->
+                </div>
+                <div>
+                    <i class="fa-solid fa-calculator"></i>
+                    <h2> Batman Merchandise</h2>
+                    <p>Demonstrating smooth user Interface experience and product buying procedure through static
+                        website application</p>
+                    <!-- <a href="">Learn more</a> -->
+                </div>
+                <div>
+                    <i class="fa-solid fa-cloud"></i>
+                    <h2>Fitness Tracker Dashboard</h2>
+                    <p>Developed a web app that tracks user activities and displays statistics and recommends
+                        personalised workout plans based on their user profile..</p>
+                    <!-- <a href="">Learn more</a> -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ------------Contact------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>samanhakim@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i></i>1234567888</p>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+
+                    </div>
+                    <a href="pictures/saman_resume.pdf" download class="btn btn3">Download Resume</a>
+
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                        <span id="msg"></span>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Saman <i class="fa-solid fa-heart"> </i> by Saman Hakim</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+
+        function openmenu() {
+            sidemenu.style.right = "0"
+        }
+        function closemenu() {
+            sidemenu.style.right = "-250px"
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyVnIhMa96KB1W3uW1LA5wwJWUSPpH-3NCgyVZqBgvmTw0ZwCCDVttDsVTnr-KUNUcReA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully!"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
