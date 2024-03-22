@@ -13,7 +13,7 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="969A8F77-06B1-4597-A4A6-F37A4664DCC3.JPEG" class="logo" />
+                <img src="images/969A8F77-06B1-4597-A4A6-F37A4664DCC3.JPEG" class="logo" />
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -26,7 +26,7 @@
             </nav>
             <div class="header-text">
                 <p id="fsd">Full Stack Developer</p>
-                <h1>Hey, I'm <span>Saman</span> <br />Hakim From Pune</h1>
+                <h1>Hey, I'm <span>Saman</span> <br />Hakim From Solapur</h1>
             </div>
         </div>
     </div>
@@ -35,13 +35,16 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="saman _image.jpeg" alt="image" />
+                    <img src="images/saman _image.png" alt="" />
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
                     <p>
-                        This is Saman Hakim. I was born in Solapur, Maharashtra. I have pursued B.Tech from Walchand Institute of Technology
-                        (WIT).
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                        aspernatur, aliquam unde, sed id ad magnam sunt eos doloribus
+                        impedit distinctio a consequuntur voluptas quisquam non soluta
+                        deserunt harum et labore. Cupiditate doloribus ipsa ratione,
+                        assumenda perspiciatis ipsam optio alias.
                     </p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -50,9 +53,12 @@
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Programming Language:</span><br>JavaScript, HTML5, CSS3</li>
-                            <li><span>Frameworks & Libraries:</span><br>Angular, Bootstrap, Express.js, JQuery</li>
-                            <li><span>Database & Connectivity:</span><br>MySQL, Node JS</li>
+                            <li><span>Frameworks & Libraries:</span><br>Angular, Bootstrap, Node.js, Express.js, JQuery</li>
+                            <li><span>Database & Connectivity:</span><br>SQL,MySQL,REST API</li>
                             <li><span>Version Control Systems:</span><br>Git & Github</li>
+
+
+
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
@@ -96,7 +102,7 @@
                     <!-- <a href="">Learn more</a> -->
                 </div>
                 <div>
-                    <i class="fa fa-pencil-square-o"></i>
+                    <i  class="fa fa-pencil-square-o"></i>
                     <h2>Fitness Tracker Dashboard</h2>
                     <p>Developed a web app that tracks user activities and displays statistics and recommends
                         personalised workout plans based on their user profile..</p>
@@ -125,9 +131,9 @@
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <input type="text" name="Name" placeholder="Enter Name" required>
+                        <input type="email" name="Email" placeholder="Enter Email" required>
+                        <textarea name="Message" rows="6" placeholder="Enter Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                         <span id="msg"></span>
 
@@ -163,6 +169,7 @@
 
         function openmenu() {
             sidemenu.style.right = "0"
+            console.log('clicks');
         }
         function closemenu() {
             sidemenu.style.right = "-250px"
